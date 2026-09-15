@@ -619,4 +619,332 @@ header, section, main, footer {
     box-shadow: 0 0 15px var(--neon-blue);
     transform: translateY(-3px);
     background: rgba(255, 255, 255, 0.05);
+
+}
+/* --- CONTENEUR DES FILTRES --- */
+.filter-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.filter-group h4 {
+    color: var(--dim);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* --- STYLE DES BOUTONS --- */
+.filter-btn, .cat-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--dim);
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    white-space: nowrap;
+}
+
+/* Hover : Légère lueur */
+.filter-btn:hover, .cat-btn:hover {
+    color: #fff;
+    border-color: var(--neon-blue);
+    transform: scale(1.05);
+    background: rgba(0, 210, 255, 0.1);
+}
+
+/* État Actif / Sélectionné (Multi-filtres) */
+.filter-btn.active, .cat-btn.selected {
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    border: none;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+    transform: scale(1.05);
+}
+
+/* Cas spécial pour le bouton E6 */
+.btn-e6.active {
+    box-shadow: 0 0 25px rgba(157, 80, 187, 0.6);
+}
+/* --- GRILLE ET CARTES --- */
+.mission-grid-flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.m-card-new {
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 25px;
+    transition: 0.4s ease;
+}
+/* État actif pour Segmentation (Cercle bleu) */
+.filter-btn.active {
+    background: var(--neon-blue);
+    color: white;
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+}
+
+/* État sélectionné pour Catégories (Dégradé) */
+.cat-btn.selected {
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    color: white;
+    border: none;
+    box-shadow: 0 0 15px rgba(157, 80, 187, 0.4);
+}
+
+/* On force les cartes à être des colonnes pour aligner le texte proprement */
+.m-card-new {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.m-card-new:hover {
+    transform: translateY(-10px) rotate(1deg); /* Petit effet de rotation dynamique */
+    border-color: var(--neon-blue);
+    box-shadow: 0 15px 35px rgba(0, 210, 255, 0.15);
+}
+
+/* Badge dans la carte */
+.m-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: rgba(0, 210, 255, 0.2);
+    color: var(--neon-blue);
+    margin-bottom: 15px;
+}
+
+/* --- LIEN DOCUMENTATION TECHNIQUE --- */
+.project-docs {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-doc-link {
+    color: var(--neon-blue);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-doc-link:hover {
+    color: var(--neon-purple);
+    text-shadow: 0 0 10px var(--neon-purple);
+}
+/* Conteneur principal des filtres */
+.filter-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filter-group h4 {
+    color: var(--dim);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.segment-filters, .category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Style de base des boutons */
+.filter-btn, .cat-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* État ACTIF (Segmentation - Bleu Néon) */
+.filter-btn.active {
+    background: var(--neon-blue);
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.5);
+    color: white;
+}
+/* --- PROTECTION DES CLIQUES --- */
+.filter-wrapper {
+    position: relative;
+    z-index: 100; /* Passe au-dessus de tout */
+    pointer-events: auto !important; /* Autorise les interactions */
+}
+
+.filter-btn, .cat-btn {
+    position: relative;
+    z-index: 101;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+/* --- ÉTATS VISUELS --- */
+
+/* Segmentation active (Bleu) */
+.filter-btn.active {
+    background: #00d2ff !important;
+    color: #fff !important;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
+}
+
+/* Catégories sélectionnées (Dégradé) */
+.cat-btn.selected {
+    background: linear-gradient(45deg, #00d2ff, #9d50bb) !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: 0 0 15px rgba(157, 80, 187, 0.6);
+}
+
+/* Effet au survol pour confirmer que c'est cliquable */
+.filter-btn:hover, .cat-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+}
+
+/* Gestion de l'affichage des projets */
+.project-item {
+    transition: opacity 0.4s ease;
+}
+
+/* État SÉLECTIONNÉ (Catégories - Dégradé Violet/Bleu) */
+.cat-btn.selected {
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    border: none;
+    box-shadow: 0 0 15px rgba(157, 80, 187, 0.5);
+    color: white;
+}
+
+/* Bouton E6 spécifique quand actif */
+.btn-e6.active {
+    background: var(--neon-purple);
+    box-shadow: 0 0 20px var(--neon-purple);
+}
+
+/* --- LE BLOC DES FILTRES --- */
+.filter-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative; 
+    z-index: 10; /* Empêche les autres éléments de bloquer les clics */
+}
+
+.filter-group h4 {
+    color: var(--dim);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.segment-filters, .category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* --- LES BOUTONS (Par défaut) --- */
+.filter-btn, .cat-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer; /* Fait apparaître la petite main */
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 11; /* Rend les boutons prioritaires au clic */
+}
+
+/* --- ÉTATS ACTIFS (Quand tu cliques dessus) --- */
+
+/* Boutons de Segmentation (All, École, Pro...) */
+.filter-btn.active {
+    background: var(--neon-blue);
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.5);
+    color: white;
+}
+
+/* Boutons de Catégories (Patrimoine, Incidents...) */
+.cat-btn.selected {
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    border: none;
+    box-shadow: 0 0 15px rgba(157, 80, 187, 0.5);
+    color: white;
+}
+
+/* Bouton E6 Spécifique */
+.filter-btn.btn-e6.active {
+    background: var(--neon-purple);
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 20px var(--neon-purple);
+}
+
+.veille-link {
+    color: inherit; /* Garde la couleur blanche/texte de ton h4 */
+    text-decoration: none; /* Enlève le souligné par défaut */
+    transition: 0.3s ease;
+}
+
+.veille-link:hover {
+    color: var(--neon-blue); /* Change de couleur au survol (si tu as cette variable) */
+    text-shadow: 0 0 8px var(--neon-blue); /* Petit effet néon au survol */
+}
+
+/* Optionnel : ajouter une petite flèche après le lien */
+.veille-link::after {
+    content: " ↗";
+    font-size: 0.8rem;
+    opacity: 0.6;
 }

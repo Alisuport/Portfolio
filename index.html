@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Arbaoui | Portfolio SISR</title>
     <link rel="stylesheet" href="portfolio1.css">
-    <script src="script.js"></script>
+    <script src="filters.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -19,6 +19,7 @@
             <li><a href="#table-section">tableau de synthése</a></li>
             <li><a href="#labo">Dévellopement profesionnel</a></li>
             <li><a href="#veille">Veille technologique</a></li>
+            
         </ul>
     </div>
 </nav>
@@ -133,7 +134,6 @@
 
     <div class="filter-wrapper">
         <header class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter">Mes   <span class="text-gradient">Réalisations professionnelles</span></h2>
             
             <div class="mt-12 flex justify-center gap-6 flex-wrap">
                 <button class="filter-btn ctx-btn active text-xs font-bold uppercase tracking-widest" onclick="filterMissions('ctx', 'all', this)">Tous</button>
@@ -153,43 +153,39 @@
             </div>
         </header>
 
-    <div class="mission-grid-flex">
-        
-        <article class="m-card-new project-item" data-segment="pro e6" data-categories="patrimoine service incidents">
-            <div class="card-header">
-                <span class="m-badge">E6 / PRO</span>
-                <h3>Infrastructure Complète</h3>
-            </div>
-            <p>Conception et déploiement d'une infrastructure réseau isolée : Firewall pfSense, contrôleur de domaine AD/DNS et serveur DHCP centralisé.</p>
-            <div class="project-docs">
-                <a href="./documentation-AD.docx" target="_blank" class="btn-doc-link">📄 Documentation installation AD/DNS</a>
-                 <a href="./documentation-DHCP.docx" target="_blank" class="btn-doc-link">📄 Documentation installation DHCP</a>
-            </div>
-        </article>
-
-        <article class="m-card-new project-item" data-segment="pro" data-categories="incidents">
-            <div class="card-header">
-                <span class="m-badge">PRO</span>
-                <h3>Support Utilisateur</h3>
-            </div>
-            <p>Gestion des tickets d'assistance et dépannage matériel de proximité lors de mon stage.</p>
-        </article>
-
-        <article class="m-card-new project-item" data-segment="ecole" data-categories="service patrimoine">
-            <div class="card-header">
-                <span class="m-badge">PRO</span>
-                <h3>Utilisation de GLPI</h3>
-            </div>
-            <p>Utilisation de l'outil GLPI pour la gestion du parc informatique et des utilisateurs.</p>
-        </article>
-
-        <article class="m-card-new project-item" data-segment="perso" data-categories="projet">
-            <div class="card-header">
-                <span class="m-badge">PRO</span>
-                <h3>Utilisation de l'AD</h3>
-            </div>
-            <p>Utilisation de l'Active Directory pour la gestion des utilisateurs et des ressources réseau.</p>
-        </article>
+    <div class="mission-grid-flex"> 
+    <article class="m-card-new project-item" data-segment="pro e6" data-categories="patrimoine service incident"> 
+        <div class="card-header"> 
+            <span class="m-badge">E6 / PRO</span> 
+            <h3>Infrastructure Complète</h3> 
+        </div> 
+        <p>Conception et déploiement d'une infrastructure réseau isolée : Firewall pfSense, contrôleur de domaine AD/DNS et serveur DHCP centralisé.</p> 
+        <div class="project-docs"> 
+            <a href="./documentation-AD.docx" target="_blank" class="btn-doc-link">📄 Documentation installation AD/DNS</a> 
+            <a href="./documentation-DHCP.docx" target="_blank" class="btn-doc-link">📄 Documentation installation DHCP</a> 
+        </div> 
+    </article> 
+    <article class="m-card-new project-item" data-segment="pro" data-categories="incident"> 
+        <div class="card-header"> 
+            <span class="m-badge">PRO</span> 
+            <h3>Support Utilisateur</h3> 
+        </div> 
+        <p>Gestion des tickets d'assistance et dépannage matériel de proximité lors de mon stage.</p> 
+    </article> 
+    <article class="m-card-new project-item" data-segment="ecole" data-categories="service patrimoine"> 
+        <div class="card-header"> 
+            <span class="m-badge">PRO</span> 
+            <h3>Utilisation de GLPI</h3> 
+        </div> 
+        <p>Utilisation de l'outil GLPI pour la gestion du parc informatique et des utilisateurs.</p> 
+    </article> 
+    <article class="m-card-new project-item" data-segment="perso" data-categories="projet"> 
+        <div class="card-header"> 
+            <span class="m-badge">PRO</span> 
+            <h3>Utilisation de l'AD</h3> 
+        </div> 
+        <p>Utilisation de l'Active Directory pour la gestion des utilisateurs et des ressources réseau.</p> 
+    </article> 
 
     </div>
 </section>
